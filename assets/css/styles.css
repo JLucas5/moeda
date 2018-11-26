@@ -1,0 +1,11 @@
+.modal-calc{
+    margin: 40px auto auto;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+}
+.modal-calc h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
