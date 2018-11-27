@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
+        <link rel="shortcut icon" href="assets/images/imc_logo.png" />
         <!-- import scripts-->
         <script src="node_modules/chart.js/dist/Chart.js"></script>
         <script src="node_modules/jquery/dist/jquery.js"></script>
@@ -25,16 +26,17 @@
             </nav>
         </header>
         <div class="container">
+            <!--Canvas para geração do gráfico-->
             <canvas id="mychart" width="1000" height="300"></canvas>
             
             <div id="demo">
+                <!--Botões para carregar dados e o canvas-->
                 <a class="waves-effect waves-light btn" type="button" onclick="loadCurrData()">Load Data</a>
                 <a class="waves-effect waves-light btn" type="button" onclick="loadCanvas()">Load Canvas</a>
             </div>
         </div>
     </body>
     <!--IMPORT CSS-->
-    <link rel="shortcut icon" href="assets/images/imc_logo.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection"/>

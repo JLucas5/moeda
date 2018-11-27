@@ -3,6 +3,8 @@ const url2 = 'https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY
 const url3 = 'https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY&symbol=LTC&market=BRL&apikey=YGW4V7E762HZ1D5D'
 var items = [];
 var labels = [];
+
+//Variável que contêm os dados da API
 var chartData = {
         bitcoin: [],
      //   etherium:[],
@@ -26,6 +28,10 @@ function loadCanvas() {
     });
 }
 
+/**
+ * Essa variável difine os atributos do gráfico, cada "dataset" equivale a uma linha no canvas
+ * chartDAta é preenchido com dados pela função loadCurrData().
+ */
 var data = {
     labels: labels,
     datasets: [
@@ -72,6 +78,9 @@ var option = {
     }
 };
 
+/**
+ * Essa função puxa os dados da API e carrega eles em na variável chartData. 
+ */
 function loadCurrData() {
     $.getJSON(url, function (data) {
         console.log(data);
@@ -97,6 +106,10 @@ function loadCurrData() {
     //    });   
     //});
 }
+
+/**
+ * Executa a função loadCurrData() ao carregar a página
+ */
 (function OnInit(){
     loadCurrData();
 })()
