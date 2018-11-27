@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html style="background-color: #fffaeb"></html>
-<html lang="en">
+<html  style="background-color: #fffaeb" lang="en">
     <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
         <!-- import scripts-->
+        <script src="node_modules/chart.js/dist/Chart.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="crypto.js"></script>
         <script type="text/javascript" src="assets/js/materialize.min.js"></script>
         <script type="text/javascript" src="assets/js/script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
@@ -23,7 +25,12 @@
             </nav>
         </header>
         <div class="container">
-
+            <canvas id="mychart" width="1000" height="300"></canvas>
+            
+            <div id="demo">
+                <a class="waves-effect waves-light btn" type="button" onclick="loadCurrData()">Load Data</a>
+                <a class="waves-effect waves-light btn" type="button" onclick="loadCanvas()">Load Canvas</a>
+            </div>
         </div>
     </body>
     <!--IMPORT CSS-->
